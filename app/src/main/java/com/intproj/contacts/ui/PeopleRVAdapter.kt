@@ -112,7 +112,7 @@ class PeopleDiffs : DiffUtil.ItemCallback<PeopleContactModel>() {
         oldItem: PeopleContactModel,
         newItem: PeopleContactModel
     ): Boolean {
-        return oldItem.mail == newItem.mail
+        return oldItem == newItem
     }
 
 }

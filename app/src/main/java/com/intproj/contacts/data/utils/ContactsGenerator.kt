@@ -5,9 +5,14 @@ import java.security.MessageDigest
 
 class ContactsGenerator {
 
+    companion object {
+        const val minContacts = 50
+        const val maxContacts = 150
+    }
+
     operator fun invoke(): List<PeopleContactModel> {
         val charPool: List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
-        val contactsNum = (50..150).random()
+        val contactsNum = (minContacts..maxContacts).random()
         val contacts = mutableListOf<PeopleContactModel>()
 
         for (i in 0..contactsNum) {
